@@ -3,6 +3,7 @@ import 'package:smartklinik/model/poli.dart';
 import 'package:smartklinik/ui/poli/poli_detail.dart';
 import 'package:smartklinik/ui/poli/poli_form.dart';
 import 'package:smartklinik/ui/poli/poli_item.dart';
+import 'package:smartklinik/widget/sidebar.dart';
 
 class PoliPage extends StatefulWidget {
   const PoliPage({super.key});
@@ -15,6 +16,7 @@ class _PoliPageState extends State<PoliPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: Sidebar(),
       appBar: AppBar(
         title: const Text("Data Poli"),
         actions: [

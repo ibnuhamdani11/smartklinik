@@ -1,16 +1,16 @@
 class Pasien {
   String? id;
-  String nomor_rm;
-  String nama;
-  String tanggal_lahir;
-  String nomor_telepon;
-  String alamat;
+  String nomorRm;
+  String namaPasien;
+  String ttlPasien;
+  String noTelpPasien;
+  String alamatPasien;
   Pasien({
     this.id,
-    required this.nomor_rm,
-    required this.nama,
-    required this.tanggal_lahir,
-    required this.nomor_telepon,
-    required this.alamat,
+    required this.nomorRm,
+    required this.namaPasien,
+    required this.ttlPasien,
+    required this.noTelpPasien,
+    required this.alamatPasien,
   });
 }

@@ -1,18 +1,18 @@
 class Pegawai {
   String? id;
   String nip;
-  String nama;
-  String tanggal_lahir;
-  String nomor_telepon;
-  String email;
-  String password;
+  String namaPegawai;
+  String ttlPegawai;
+  String noTelpPegawai;
+  String emailPegawai;
+  String passwordPegawai;
   Pegawai({
     this.id,
     required this.nip,
-    required this.nama,
-    required this.tanggal_lahir,
-    required this.nomor_telepon,
-    required this.email,
-    required this.password,
+    required this.namaPegawai,
+    required this.ttlPegawai,
+    required this.noTelpPegawai,
+    required this.emailPegawai,
+    required this.passwordPegawai,
   });
 }

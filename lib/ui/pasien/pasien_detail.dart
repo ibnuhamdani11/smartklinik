@@ -1,23 +1,22 @@
 import 'package:flutter/material.dart';
-import 'package:smartklinik/model/poli.dart';
-import 'package:smartklinik/ui/poli/poli_detail.dart';
-import 'package:smartklinik/ui/poli/poli_page.dart';
-import 'package:smartklinik/ui/poli/poli_update_form.dart';
+import 'package:smartklinik/model/pasien.dart';
+import 'package:smartklinik/ui/pasien/pasien_page.dart';
+import 'package:smartklinik/ui/pasien/pasien_update_form.dart';
 
-class PoliDetail extends StatefulWidget {
-  final Poli poli;
-  const PoliDetail({super.key, required this.poli});
+class PasienDetail extends StatefulWidget {
+  final Pasien pasien;
+  const PasienDetail({super.key, required this.pasien});
 
   @override
-  State<PoliDetail> createState() => _PoliDetailState();
+  State<PasienDetail> createState() => _PasienDetailState();
 }
 
-class _PoliDetailState extends State<PoliDetail> {
+class _PasienDetailState extends State<PasienDetail> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Detail Poli"),
+        title: const Text("Detail Pasien"),
       ),
       body: Column(
         children: [
@@ -25,7 +24,35 @@ class _PoliDetailState extends State<PoliDetail> {
             height: 20,
           ),
           Text(
-            "Nama Poli : ${widget.poli.namaPoli} ",
+            "Nama Pasien : ${widget.pasien.namaPasien} ",
+            style: TextStyle(fontSize: 20),
+          ),
+          SizedBox(
+            height: 20,
+          ),
+          Text(
+            "NIP Pasien : ${widget.pasien.nomorRm} ",
+            style: TextStyle(fontSize: 20),
+          ),
+          SizedBox(
+            height: 20,
+          ),
+          Text(
+            "Tanggal Lahir Pasien : ${widget.pasien.ttlPasien} ",
+            style: TextStyle(fontSize: 20),
+          ),
+          SizedBox(
+            height: 20,
+          ),
+          Text(
+            "No Telp Pasien : ${widget.pasien.noTelpPasien} ",
+            style: TextStyle(fontSize: 20),
+          ),
+          SizedBox(
+            height: 20,
+          ),
+          Text(
+            "Alamat Pasien : ${widget.pasien.alamatPasien} ",
             style: TextStyle(fontSize: 20),
           ),
           SizedBox(
@@ -47,7 +74,7 @@ class _PoliDetailState extends State<PoliDetail> {
         Navigator.push(
             context,
             MaterialPageRoute(
-                builder: (context) => PoliUpdateForm(poli: widget.poli)));
+                builder: (context) => PasienUpdateForm(pasien: widget.pasien)));
       },
       child: const Text('Ubah'),
       style: ElevatedButton.styleFrom(backgroundColor: Colors.green),
@@ -65,7 +92,7 @@ class _PoliDetailState extends State<PoliDetail> {
                 onPressed: () {
                   Navigator.pop(context);
                   Navigator.pushReplacement(context,
-                      MaterialPageRoute(builder: (context) => PoliPage()));
+                      MaterialPageRoute(builder: (context) => PasienPage()));
                 },
                 child: Text("YA"),
                 style: ElevatedButton.styleFrom(backgroundColor: Colors.red)),
