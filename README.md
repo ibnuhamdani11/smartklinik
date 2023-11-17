@@ -3,9 +3,14 @@
 Untuk tugas kuliah
 
 ## Cara Running
+
 flutter pub get 	=> untuk install package
+
 flutter device		=> untuk cek device terhubung
+
 flutter run 		=> untuk running
+
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
